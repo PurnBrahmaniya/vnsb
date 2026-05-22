@@ -1,0 +1,76 @@
+---
+// src/layouts/BaseLayout.astro
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-pastelPink rounded-xl flex items-center justify-center text-darkBlue p-1.5">
+                    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                        <path d="M10 112h100" stroke-width="2.5" />
+                        <path d="M14 107h92" />
+                        <path d="M18 102h84" />
+
+                        <path d="M22 102v-12h14v12" />
+                        <path d="M20 96h18" />
+    
+                        <path d="M84 102v-12h14v12" />
+                        <path d="M82 96h18" />
+
+                        <path d="M25 90V36h8v54h-8Z" fill="currentColor" fill-opacity="0.03" />
+                        <path d="M23 80h12M23 68h12M23 56h12M23 44h12" stroke-width="1.5" />
+                        <path d="M23 36h12l3-6H20l3 6Z" />
+
+                        <path d="M87 90V36h8v54h-8Z" fill="currentColor" fill-opacity="0.03" />
+                        <path d="M85 80h12M85 68h12M85 56h12M85 44h12" stroke-width="1.5" />
+                        <path d="M85 36h12l3-6H82l3 6Z" />
+
+                        <path d="M33 55C45 34 75 34 87 55" stroke-width="2" />
+                        <path d="M35 59C46 39 74 39 85 59" stroke-width="1" stroke-dasharray="1 3" />
+                        <path d="M60 34v10l2-2-2 4-2-4 2 2" stroke-width="1.5" />
+
+                        <path d="M16 30h88v4H16z" fill="currentColor" fill-opacity="0.05" />
+
+                        <path d="M20 22h80v4H20z" />
+                        <path d="M24 26v4M36 26v4M48 26v4M60 26v4M72 26v4M84 26v4M96 26v4" stroke-width="1.5" />
+
+                        <path d="M14 14h92v4H14z" fill="currentColor" fill-opacity="0.1" />
+                        <path d="M18 18v4M30 18v4M42 18v4M54 18v4M66 18v4M78 18v4M90 18v4" stroke-width="1.5" />
+
+                        <path d="M54 14l6-10 6 10H54Z" fill="currentColor" fill-opacity="0.1" />
+                        <path d="M60 4V1" />
+                        <path d="M26 14l4-6 4 6H26Z" />
+                        <path d="M30 8V6" />
+                        <path d="M86 14l4-6 4 6H86Z" />
+                        <path d="M90 8V6" />
+    
+                        <path d="M16 14l2-4 2 4M100 14l2-4 2 4" />
+                    </svg>
+                </div>
+                <a href="/" class="text-2xl font-bold tracking-tight text-darkBlue">VNSB</a>
+            </div>
+            <div class="hidden lg:flex gap-8 text-sm font-semibold text-gray-500">
+                <a href="/" class="hover:text-darkBlue transition-colors">Home</a>
+                <a href="/courses" class="hover:text-darkBlue transition-colors">Courses</a>
+                <a href="/faculty" class="hover:text-darkBlue transition-colors">Faculty</a>
+                <a href="/rankings" class="hover:text-darkBlue transition-colors">Rankings</a>
+                <a href="/gallery" class="hover:text-darkBlue transition-colors">Gallery</a>
+                <a href="/about" class="hover:text-darkBlue transition-colors">About Us</a>
+            </div>
+            <a href="#apply" class="bg-darkBlue text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-all shadow-sm">Apply Now</a>
+        </div>
+    </nav>
+
+</body>
+</html>

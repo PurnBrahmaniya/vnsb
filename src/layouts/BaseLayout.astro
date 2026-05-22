@@ -1,0 +1,29 @@
+---
+// src/layouts/BaseLayout.astro
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+    
+    <Nav />
+    
+    <main class="pt-32 pb-24 flex-grow w-full">
+        <slot /> 
+    </main>
+
+    <Footer />
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: PurnBrahmaniya/vnsb # We will update this later
+  branch: main
+
+# Where to save images and PDFs when the admin uploads them
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  # 1. THE COURSES DASHBOARD
+  - name: "courses"
+    label: "Courses"
+    folder: "src/pages/data/courses" # Where Astro will look for the course data
+    create: true
+    delete: true # Explicitly allowing deletion
+    fields:
+      - { label: "Course Title", name: "title", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options:
+            [
+              "Science & Tech",
+              "Creative Arts",
+              "Business",
+              "Engineering",
+              "Social Sciences",
+            ],
+        }
+      - {
+          label: "Duration",
+          name: "duration",
+          widget: "string",
+          default: "3 Years",
+        }
+      - { label: "Description", name: "description", widget: "text" }
+
+  # 2. THE GALLERY DASHBOARD
+  - name: "gallery"
+    label: "Gallery Photos"
+    folder: "src/pages/data/gallery"
+    create: true
+    delete: true # Explicitly allowing deletion
+    fields:
+      - { label: "Photo Title", name: "title", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Events", "Workshops", "Sports", "Festivals"],
+        }
+      - { label: "Image", name: "image", widget: "image" }
+
+  # 3. THE PDF/RESULTS DASHBOARD
+  - name: "documents"
+    label: "Timetables & Results (PDFs)"
+    folder: "src/pages/data/documents"
+    create: true
+    delete: true # Explicitly allowing deletion
+    fields:
+      - { label: "Document Name", name: "title", widget: "string" }
+      - { label: "PDF File", name: "pdf_file", widget: "file" }
