@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: PurnBrahmaniya/vnsb # UPDATE THIS LATER
+  branch: main
+
+media_folder: "assets/images" # Where admin uploads are saved
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page Settings"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+  - name: "gallery"
+    label: "Gallery Images"
+    folder: "gallery-data"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Events", "Workshops", "Sports", "Festivals"],
+        }
+      - { label: "Image", name: "image", widget: "image" }
