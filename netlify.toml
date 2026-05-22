@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # This tells NPM to ignore the dependency version conflicts for the whole build
+  NPM_FLAGS = "--legacy-peer-deps"
