@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* This is the Tailwind v4 way to add your custom colors */
+@theme {
+  --color-darkBlue: #1e293b;
+  --color-pastelGreen: #bbf7d0;
+  --color-pastelPink: #fbcfe8;
+  --color-pastelPurple: #ddd6fe;
+  --color-pastelYellow: #fef08a;
+  --font-sans: "Inter", sans-serif;
+}
