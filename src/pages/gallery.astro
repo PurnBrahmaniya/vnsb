@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // We use a try/catch block so your site doesn't crash if you haven't uploaded any images yet!
 let galleryItems = [];
 try {
-    galleryItems = await Astro.glob('../../gallery-data/*.md');
+    galleryItems = await Astro.glob('../gallery/*.md');
 } catch (error) {
     galleryItems = [];
 }

@@ -19,7 +19,7 @@ collections:
   - name: "gallery"
     label: "Gallery Images"
     # REMOVE "public/" from here! We just want the data files in the root.
-    folder: "gallery-data"
+    folder: "src/gallery"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
