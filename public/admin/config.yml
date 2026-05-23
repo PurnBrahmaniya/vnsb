@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway # This is the crucial change!
+  name: git-gateway
   branch: main
 
-media_folder: "assets/images"
+# MUST include "public/" so Astro can actually display the images online
+media_folder: "public/assets/images"
 public_folder: "/assets/images"
 
 collections:
@@ -17,7 +18,8 @@ collections:
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
   - name: "gallery"
     label: "Gallery Images"
-    folder: "gallery-data"
+    # MUST save to the exact folder Astro is going to look inside
+    folder: "src/gallery-data"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
